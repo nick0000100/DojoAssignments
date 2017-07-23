@@ -1,0 +1,178 @@
+body {
+    font-family: sans-serif;
+}
+a, h3, p, li {
+    color: #cdd7df;
+} 
+
+input[type=search] {
+    height: 30px;
+    width: 150px;
+}
+
+input[type=submit] {
+    background-color: #245176;
+    border: 2px solid #c0c0c0;
+    border-radius: 5px;
+    color: white;
+    height: 25px;
+    width: 40px;
+}
+
+#wrapper {
+    width: 970px;
+}
+
+p > a {
+    color: #a4981e;
+}
+
+#search {
+    background-color: #444444;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1f2124;
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+}
+
+#main_nav > a {
+    padding: 5px 20px 5px 20px;
+    text-decoration: none;
+}
+
+#main_nav {
+    background-color: #3e79ad;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #1f2124;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+#top {
+    background-color: #245176;
+    padding: 15px;
+}
+
+main {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 20px;
+    width: 600px;
+    text-align: center;
+}
+
+main p {
+    font-size: 14px;
+}
+
+#side_nav {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#side_nav  ul {
+    list-style-position: inside;
+}
+
+#side_nav li {
+    padding-bottom: 10px;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+#poem > p{
+    color: #dabd3b;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+aside {
+    border-top: 6px solid #73a7d5;
+    display: inline-block;
+    padding-right: 40px;
+    width: 400px;
+    height: 300px;
+}
+
+aside  h3, aside  p, aside {
+    text-align: center;
+    color: black;
+}
+
+aside a {
+    color: #7BABD0;
+    text-align: center;
+    text-decoration: none;
+}
+
+aside li {
+    list-style-type: square;
+    color: black;
+}
+
+#bottom {
+    display: flex;
+    font-size: 15px;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#tools {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+    left: 330px;
+    vertical-align: top;
+}
+
+#tools p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+footer {
+    background: #245177; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#245177, #3475ac); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#245177, #3475ac); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#245177, #3475ac); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#245177, #3475ac); /* Standard syntax (must be last) */
+    padding-top: 50px;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+footer a, footer p {
+    color: #6ea2cf;
+    padding-left: 40px;
+    text-decoration: none;
+}
+
+#bottom ul  li{
+    padding: 0;
+	margin: 0;
+	width: 260px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.bar {
+    color: black;
+}
