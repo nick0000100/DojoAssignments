@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Functions</title>
+        <link rel="stylesheet" href="jQueryFunctions.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jQueryFunctions.js"></script>
+    </head>
+    <body>
+        <div>
+            <h2>.click</h2>
+            <button type="button" name="click">Show alert</button>
+            <p>Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+            <ul>
+                <li>.click(handler)</li>
+                <li>.click([eventData], handler)</li>
+                <li>.click()</li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="hide">.hide</h2>
+            <button type="button" name="hide">Click to disappear</button>
+            <p>Hide the matched elements.</p>
+            <ul>
+                <li>.hide([duration][,complete])</li>
+                <li>.hide(options)</li>
+                <li>.hide()</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.show</h2>
+            <button type="button" name="show">Click to make above reappear</button>
+            <p>Display the matched elements.</p>
+            <ul>
+                <li>.show([duration][,complete])</li>
+                <li>.show(options)</li>
+                <li>.show()</li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="toggle">.toggle</h2>
+            <button type="button" name="toggle">Display/Hide</button>
+            <p>There are two types:<br> Display or hide the matched elements. <br>
+            Bind two or more handlers to the matched elements, to be executed on alternate clicks.</p>
+            <ul>
+                <li>.toggle([duration][,complete])</li>
+                <li>.toggle(options)</li>
+                <li>.toggle(duration[,easing][,complete])</li>
+                <li>.toggle(display)</li>
+            </ul>
+            <ul>
+                <li>.toggle(handler,handler[,handler])</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.slideDown</h2>
+            <button type="button" name="slideDown">Slide Down</button>
+            <p id="slideDownP"> Display the matched elements with a sliding motion.</p>
+            <ul>
+                <li>.slideDown([duration][,complete])</li>
+                <li>.slideDown(options)</li>
+                <li>.slideDown( [duration ] [, easing ] [, complete ] )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.slideUp</h2>
+            <button type="button" name="slideUp">Slide up Above </button>
+            <p>Hide the matched elements with a sliding motion.</p>
+            <ul>
+                <li>.slideUp( [duration ] [, complete ] )</li>
+                <li>.slideUp( options )</li>
+                <li>.slideUp( [duration ] [, easing ] [, complete ] )</li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="slideToggle">.slideToggle</h2>
+            <button type="button" name="slideToggle">Up and Down Toggle</button>
+            <p>Display or hide the matched elements with a sliding motion.</p>
+            <ul>
+                <li>.slideToggle( [duration ] [, complete ] )</li>
+                <li>.slideToggle( options )</li>
+                <li>.slideToggle( [duration ] [, easing ] [, complete ] )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.fadeIn</h2>
+            <button type="button" name="fadeIn">Fade In</button>
+            <p>Display the matched elements by fading them to opaque.</p>
+            <p id="fade">FADDDDDERRERERER</p>
+            <ul>
+                <li>.fadeIn( [duration ] [, complete ] )</li>
+                <li>.fadeIn( options )</li>
+                <li>.fadeIn( [duration ] [, easing ] [, complete ] )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.fadeOut</h2>
+            <button type="button" name="fadeOut">Fade Out</button>
+            <p>Hide the matched elements by fading them to transparent.</p>
+            <ul>
+                <li>.fadeOut( [duration ] [, complete ] )</li>
+                <li>.fadeOut( options )</li>
+                <li>.fadeOut( [duration ] [, easing ] [, complete ] )</li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="giveClass">.addClass</h2>
+            <button type="button" name="addClass">Add class to make red</button>
+            <p>Adds the specified class(es) to each element in the set of matched elements.</p>
+            <ul>
+                <li>.addClass( className )</li>
+                <li>.addClass( function )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.before</h2>
+            <button type="button" name="before">Make a p tag before me</button>
+            <p>Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+            <ul>
+                <li>.before( content [, content ] )</li>
+                <li>.before( function )</li>
+                <li>.before( function-html )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.after</h2>
+            <button type="button" name="after">Make a p tag after me</button>
+            <p>Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+            <ul>
+                <li>.after( content [, content ] )</li>
+                <li>.after( function )</li>
+                <li>.after( function-html )</li>
+            </ul>
+        </div>
+        <div id="append">
+            <h2>.append</h2>
+            <button type="button" name="append">Make a p after every li</button>
+            <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+            <ul>
+                <li>.append( content [, content ] )</li>
+                <li>.append( function )</li>
+            </ul>
+        </div>
+        <div id="html">
+            <h2>.html</h2>
+            <button type="button" name="html">Change the content of things</button>
+            <p>Get the HTML contents of the first element in the set of matched elements.<br>
+            Returns the content in the selected elements; first match<br>
+            Set changes all not just first</p>
+            <ul>
+                <li>.html()</li>
+                <li>.html( htmlString )</li>
+                <li>.html( function )</li>
+            </ul>
+        </div>
+        <div id="attr">
+            <h2>.attr</h2>
+            <button type="button" name="attr">Change the li content to the name of the radio button</button>
+            <p>Get the value of an attribute for the first element in the set of matched elements.</p>
+            <input type="radio" name="radio" value="">
+            <ul>
+                <li>.attr( attributeName )</li>
+                <li>.attr( attributeName, value )</li>
+            </ul>
+        </div>
+        <div>
+            <h2>.val</h2>
+            <button type="button" name="val">Copy</button>
+            <p>Get the current value of the first element in the set of matched elements.</p>
+            <input id="take" type="text" value="Type here and press button">
+            <input type="text" value="Look Here">
+            <ul>
+                <li>.val()</li>
+                <li>.val(value)</li>
+            </ul>
+        </div>
+        <div>
+            <h2 id="text">.text</h2>
+            <button type="button" name="text">Look at console and click</button>
+            <p>Get the combined text contents of each element in the set of matched elements, including their descendants.</p>
+            <ul>
+                <li>.text()</li>
+                <li>.text( text )</li>
+            </ul>
+        </div>
+        <div id="data">
+            <h2>.data</h2>
+            <button type="button" name="data">Click to see value of div in console.</button>
+            <p>Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.<br>
+            Attach data to a div and retrieve it.</p>
+            <p>Look at these values { first: 16, last: "pizza!" }</p>
+            <ul>
+                <li>.data( key, value ) Attach</li>
+                <li>.data( key ) Pull Data from the key</li>
+            </ul>
+        </div>
+    </body>
+</html>

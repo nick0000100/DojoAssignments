@@ -1,0 +1,15 @@
+div {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+ul  {
+    padding-left: 0;   
+}
+ul li  {
+    list-style-position: inside;
+}
+
+.red {
+    color: red;
+}

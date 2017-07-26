@@ -1,0 +1,20 @@
+div div {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    
+}
+
+form, div {
+    display: inline-block;
+}
+
+div {
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+input {
+    margin-bottom: 5px;
+}
