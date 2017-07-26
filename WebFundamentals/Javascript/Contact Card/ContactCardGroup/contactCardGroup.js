@@ -11,7 +11,6 @@ $(document).ready(function(){
         $("#cards div").last().append("<p>Click for description!</p>");
         $("#cards div").last().append("<p id='desc'> " + bio +"</p>");
         $("#first").val("");
-        $("#description").val("");
         });
         return false;
     });
