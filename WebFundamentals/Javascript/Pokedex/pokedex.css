@@ -1,0 +1,15 @@
+#info {
+    height: 600px;
+    width: 200px;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#pokemon {
+    width: 85%;
+}
