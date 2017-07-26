@@ -18,3 +18,7 @@ div {
 input {
     margin-bottom: 5px;
 }
+
+#desc {
+     display : none;
+}

@@ -8,7 +8,7 @@ $(document).ready(function(){
         $("#cards").append("<div></div>");
         $("#cards div").last().append("<h2>" + first + " " + last +"</h2>");
         $("#cards div").last().append("<p>Click for description!</p>");
-        $("#cards div").last().append("<p style='display : none'> " + description +"</p>");
+        $("#cards div").last().append("<p id='desc'> " + description +"</p>");
         $("#first").val("");
         $("#last").val("");
         $("#description").val("");
