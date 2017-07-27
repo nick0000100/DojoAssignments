@@ -9,7 +9,6 @@ $(document).ready(function() {
     $(document).on("click", "img", function() {
         var pokeURL = "http://pokeapi.co/api/v2/";
         var id = $(this).attr("id");
-        console.log(id);
         $.getJSON(pokeURL + "pokemon/" + id + "/", function(data) {
 
             // Resets info box
