@@ -8,7 +8,7 @@ $(document).ready(function() {
         var key = "&&appid=3edd1206c4f698f92edcc1367b545b85";
         var location = $("#location").val();
         $.get(url + location + key, function(data) {
-
+            console.log(data);
             // Finds variables
             var name = data.name;
             var temperature = data.main.temp;

@@ -1,0 +1,8 @@
+1: Downloaded Django then installed it.
+2: Displayed a list of installed packages
+3: Showed that the Django package was already downloaded and installed.
+4: Shows installed packages in requirements format.
+5: created a txt file of the freeze commands
+6: Showed all of the files in the pacakge and asked for confirmation
+7: nothing occured / shows the information about the installed package
+8: Searched for specified query
