@@ -28,17 +28,16 @@ class CallCenter(object):
 
     def remove(self):
         self.queue -= 1
-        self.calls[1:len(self.calls)]
+        self.calls = self.calls[1:len(self.calls)]
         return self
 
     def displayInfo(self):
         for i in range(len(self.calls)):
-            print "newcall"
             name = self.calls[i].name
             number = self.calls[i].number
             print "Name:", name
             print "Number", number
-        print "Calls in queue", self.queue
+        print "Calls number in queue", self.queue
         return self
     
     def removeNum(self, number):
@@ -48,14 +47,25 @@ class CallCenter(object):
         self.queue -= 1
         return self
 
+    def sortCalls(self):
+        self.calls = sorted(self.calls, key=lambda call: call.time)
+        return self
+    
+    
+
 call1 = Call(1, "A", 12, 1, "hurt")
 # call1.display()
 
 call2 = Call(2, "B", 123, 2, "hi")
-callCenter1 = CallCenter([], 0)
-callCenter1.add(call1)
-callCenter1.add(call2)
 
+callCenter1 = CallCenter([], 0)
+
+callCenter1.add(call2)
+callCenter1.add(call1)
+
+# callCenter1.displayInfo()
+# callCenter1.removeNum(12)
+# callCenter1.remove()
 callCenter1.displayInfo()
-callCenter1.removeNum(12)
+callCenter1. sortCalls()
 callCenter1.displayInfo()

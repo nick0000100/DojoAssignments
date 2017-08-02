@@ -7,24 +7,25 @@ class Patient(object):
     
 class Hospital(object):
 
-    beds = {}
 
-    def __init__(self, patients, name, capacity):
+    def __init__(self, patients, name, capacity, beds = {}):
+
         self.patients = patients
         self.name = name
         self.capacity = capacity
+        self.beds = beds
         for i in range(0, capacity):
             self.beds[i] = None
 
     def admit(self, patient):
         if len(self.patients) >= self.capacity:
-            return "Hospital is at max capacity, sorry."
+            print "Hospital is at max capacity, sorry."
         else:
             for i in self.beds:
                 if self.beds[i] == None:
                     patient.bed = i
                     self.patients.append(patient)
-                    self.beds[i] = "full"
+                    self.beds[i] = "occupied"
                     break
         return self
     
@@ -73,3 +74,9 @@ hospital.admit(patient7)
 hospital.admit(patient8)
 hospital.admit(patient9)
 hospital.display()
+hospital.discharge(patient4)
+hospital.display()
+hospital.admit(patient8)
+hospital.admit(patient9)
+hospital.admit(patient8)
+hospital.admit(patient9)
