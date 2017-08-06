@@ -1,0 +1,21 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 align="center">Welcome to the Greate Number Game!</h1>
+        <p align="center">I am thinking of a number between 1 and 100</p>
+        <p align="center">Take a guess!</p>
+        <form action="/results" method="post">
+            <input type="text" name="guess"/>
+            <input type="submit" value="Guess" />
+        </form>
+        <p>{{result}}</p>
+        <div>
+            {% if result == "Winner" %}
+                <form action="/">
+                    <input type="submit" value="Play Again?" />
+                </form>
+            {% endif %}
+        </div>
+    </body>
+</html>

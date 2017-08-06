@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <style>
+            body {background-color: rgb({{red}}, {{green}}, {{blue}})}
+        </style>
+    </head>
+    <body>
+        <form action="/color" method="post">
+            <label>Red</label><input type="text" name="red">
+            <label>Green</label><input type="text" name="green">
+            <label>Blue</label><input type="text" name="blue">
+            <input type="submit" value="Color it!" />
+        </form>
+    </body>
+</html>

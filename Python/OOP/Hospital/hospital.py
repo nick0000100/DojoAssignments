@@ -7,7 +7,6 @@ class Patient(object):
     
 class Hospital(object):
 
-
     def __init__(self, patients, name, capacity, beds = {}):
 
         self.patients = patients
