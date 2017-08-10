@@ -1,0 +1,11 @@
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+
+fix: Make sure you supplied the correct password value to self.config.password
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'no'@'localhost' (using password: YES)")
+
+fix: put the correct username (root)
+
+OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database '123'")
+
+fix: provide a valid database

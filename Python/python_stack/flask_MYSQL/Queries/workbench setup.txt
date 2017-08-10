@@ -1,0 +1,4 @@
+SELECT * FROM tweets
+SELECT tweet FROM tweets
+SELECT tweet FROM tweets
+WHERE length(tweet) > 100

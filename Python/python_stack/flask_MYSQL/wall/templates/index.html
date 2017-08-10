@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <div id="failedLogIn">
+            {% with messages = get_flashed_messages(category_filter=['logInError']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <h2>Login</h2>
+        <form action='/login' method='POST'>
+            <label for="email">Email:<input type="text" name="email"></label>
+            <label for="password">Password:<input type="text" name="password"></label>
+        <input type="submit" value="Login">
+        </form>
+
+        <div id="failedRegister">
+            {% with messages = get_flashed_messages(category_filter=['registrationError']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <h2>Register</h2>
+        <form action='/register' method='POST'>
+            <label for="first_name">First Name:<input type="text" name="first_name"></label>
+            <label for="last_name">Last Name:<input type="text" name="last_name"></label>
+            <label for="email">Email:<input type="text" name="email"></label>
+            <label for="password">Password:<input type="password" name="password"></label>
+            <label for="cPassword">Confirm Password:<input type="password" name="cPassword"></label>
+        <input type="submit" value="Register">
+        </form>
+    </body>
+</html>
