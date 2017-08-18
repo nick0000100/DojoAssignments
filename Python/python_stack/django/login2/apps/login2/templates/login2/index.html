@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login &amp Reg &#124 Home</title>
+        <style>
+            input {
+                display: block;
+                margin-bottom: 1em;
+            }
+
+            .error {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="errors">
+            {% if messages %}
+                {% for message in messages %}
+                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <form action="/register" method="POST">
+            {% csrf_token %}
+            <h2>Register</h2>
+            <label>First Name:</label><input type="text" name="first_name">
+            <label>Last Name:</label><input type="text" name="last_name">
+            <label>Email:</label><input type="text" name="email">
+            <label>Password:</label><input type="password" name="password">
+            <label>Confirm PW:</label><input type="password" name="cPass">
+            <input type="submit" value="Register">
+        </form>
+
+        <form action="/login" method="POST">
+            {% csrf_token %}
+            <h2>Login</h2>
+            <label>Email:</label><input type="text" name="email">
+            <label>Password:</label><input type="password" name="password">
+            <input type="submit" value="Login">
+        </form>
+    </body>
+
+</html>

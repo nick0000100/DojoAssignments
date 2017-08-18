@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <style>
+            #allBooks {
+                overflow: scroll;
+                width: 30%;
+            }
+            #reviews, #allBooks, #side {
+                display: inline-block;
+                height: 100px;
+            }
+            #reviews {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top">
+            <p>Welcome, {{request.session.first_name}}</p>
+            <a href="/books/add">Add Book and Review</a> <a href="/logout">Logout</a>
+        </div>
+        <div id="reviews">
+            <h2>Recent Book Reviews</h2>
+            {% for review in reviews %}
+                <p>Rating: {{review.rating}}</p>
+                {% for user in users %}
+                    {% if user.id == review.user_id %}
+                        <p>{{user.first_name}} says: {{review.content}}
+                    {% endif %}
+                {% endfor %}
+                <p>Posted on: {{review.created_at}}</p>
+            {% endfor %}
+        </div>
+        
+        <div id="side">
+            <h2 id="other">Other Books with Reviews:</h2>
+            <div id="allBooks">
+                {% for book in books %}
+                    <a href="/book/{{book.id}}">{{book.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

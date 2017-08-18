@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input {
+                display: block;
+            }
+            .error {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Add a comment</h1>
+        <p>Comment</p>
+        <form action="/users/newComment/{{low}}/{{up}}" method="POST">
+            {% csrf_token %}
+            <textarea rows="5" col="10" name="comment"></textarea>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

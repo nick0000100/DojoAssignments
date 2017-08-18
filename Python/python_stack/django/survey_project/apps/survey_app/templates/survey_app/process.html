@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <div id="content">
+            <p>Thanks for submitting this form! You have submitted this from {{request.session.count}} times now</p>
+            <div>
+                <h2>Submitted Information</h2>
+                <p>Name: {{request.session.name}}</p>
+                <p>Dojo Location: {{request.session.location}}</p>
+                <p>Favorite Language: {{request.session.language}}</p>
+                <p>Comment: {{request.session.comment}}</p>
+            </div>
+            <form action='/reset' method='POST'>
+            {% csrf_token %}
+            <input type='submit' name='submit' value='Go Back'>
+            </form> 
+        </div>
+    </body>
+</html>

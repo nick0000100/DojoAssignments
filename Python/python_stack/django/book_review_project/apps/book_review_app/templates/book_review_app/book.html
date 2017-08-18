@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Book and Review</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="/books">Home</a> <a href="/logout">Logout</a>
+        </header>
+        <div id="reviews">
+            <h1>{{book.name}}</h1>
+            <h2>Author: {{book.author.name}}</h2>
+            <h2>Reviews:</h2>
+            {% for review in reviews %}
+                <p>Rating: {{review.rating}}</p>
+                {% for user in users %}
+                    {% if user.id == review.user_id %}
+                        <p><a href="/user/{{user.id}}">{{user.first_name}}</a> says: {{review.content}}</p>
+                    {% endif %}
+                {% endfor %}
+                {% if review.user_id == request.session.id %}
+                    <a href="/delete/{{review.id}}">Delete this Review</a>
+                {% endif %}
+                <p>Posted on: {{review.created_at}}</p>
+            {% endfor %}
+        </div>
+        <div id="addReview">
+            <p>Add a Review</p>
+            <form action="/addReview/{{book.id}}" method="POST">
+                {% csrf_token %}
+                <textarea rows="5" cols="10" name="review"></textarea>
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label>stars</label>
+                <input type="submit" value="Add a review">
+            </form>
+        </div>
+    </body>
+</html>

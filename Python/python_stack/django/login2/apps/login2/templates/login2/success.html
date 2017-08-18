@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login &amp Reg &#124 Success</title>
+        <style>
+            .success {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Success! Welcome, {{request.session.first_name}}</h1>
+            <p class="success">Successfully registered (or logged in)!</p>
+        </div>
+
+        <a href="/logout">Logout</a>
+    </body>
+</html>

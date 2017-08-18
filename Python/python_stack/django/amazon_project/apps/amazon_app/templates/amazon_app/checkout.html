@@ -1,0 +1,14 @@
+<html>
+    <head>
+    <title>Amadon Checkout</title>
+    </head>
+    <body>
+        <h1>Thank you for your business!</h1>
+        <p>We charged your credit card for {{request.session.newCharge}}</p>
+        <p>You have ordered {{request.session.itemNumber}} items so far and spent {{request.session.spent}} with Amadon.com</p>
+        <form action='/' method='post'>
+            {% csrf_token %}
+            <input type='submit' value='Go back' />
+        </form>
+    </body>
+</html>

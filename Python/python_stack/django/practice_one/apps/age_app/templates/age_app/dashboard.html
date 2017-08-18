@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input {
+                display: block;
+            }
+            .error {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/users/groups/0/10">0-10</a>
+        <a href="/users/groups/11/18">11-18</a>
+        <a href="/users/groups/19/24">19-24</a>
+        <a href="/users/groups/25/35">25-35</a>
+        <a href="/users/groups/36/50">36-50</a>
+        <a href="/users/groups/51/100">51+</a>
+        <p>Welcome, {{request.session.name}} <a href="/logout">Logout</a></p>
+        <table>
+            <p>Top 3 Age Groups
+            <thead>
+                <tr>
+                    <th>Group</th>
+                    <th>Count</th>
+                </tr>
+            <thead>
+            <tbody>
+                {% for group in top3 %}
+                    <tr>
+                        <td>{{group.name}}</td>
+                        <td>{{group.count}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

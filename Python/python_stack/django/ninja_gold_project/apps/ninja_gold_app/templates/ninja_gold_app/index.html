@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+div {
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#gold {
+    height: 40px;
+    width: 200px;
+}
+
+span {
+    color: gold;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#holder {
+    display: flex;
+    width: 1000px;
+    justify-content: space-around;
+}
+
+.earn {
+    width: 20%;
+    padding: 15px;
+    margin: 5px;
+}
+
+#activities {
+    width: 1000px;
+    height: 100px;
+    display: block;
+    overflow: scroll;
+}
+
+.lose {
+    color: red;
+}
+
+.win {
+    color: green;
+}
+</style>
+    <title>Ninja Gold Django</title>
+    </head>
+    <body>
+        <h3>Your Gold: <span>{{request.session.gold}}</span></h3>
+        <div id="holder">
+            <div id="farm" class="earn">
+                <h2>Farm</h2>
+                <p>Earns 10-20 Gold</p>
+                <form action="/process" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="farm">
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div id="cave" class="earn">
+                <h2>Cave</h2>
+                <p>Earns 5-10 Gold</p>
+                <form action="/process" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="cave">
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div id="house" class="earn">
+                <h2>House</h2>
+                <p>Earns 2-5 Gold</p>
+                <form action="/process" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="house">
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div id="casino" class="earn">
+                <h2>Casino</h2>
+                <p>Earns or Takes 0-50 Gold</p>
+                <form action="/process" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="building" value="casino">
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+        </div>
+        <p>Activities</p>
+        <div id="activities">
+            {% if request.session.activities %}
+                {% for activity in request.session.activities %}
+                    {% if 'Earned' in activity %}
+                        <p class='win'>{{ activity }}</p>
+                    {% else %}
+                        <p class='lose'>{{ activity }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        <footer>
+            <form action="/reset" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Reset" />
+            </form>
+        </footer>
+    </body>
+</html>

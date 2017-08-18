@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <div id="content">
+        <form action='/surveys/process' method="POST">
+            {% csrf_token %}
+            <label>Your Name:</label><input type="text" name="name"><br/>
+            <label>Dojo Location:</label><input type="text" name="location"><br/>
+            <label>Favorite Language:</label><input type="text" name="language"><br/>
+            <label>Comment</label><textarea rows="4" cols ="50" name="comment"></textarea><br/>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+        </div>
+    </body>
+</html>
